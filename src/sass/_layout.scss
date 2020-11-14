@@ -1,0 +1,17 @@
+.container{
+    min-width: $container-width;
+    padding: 0 5rem;
+}
+
+.header{
+    background-color: map-get($app-color,"primary");
+
+}
+
+.main{
+
+}
+
+.footer{
+
+}

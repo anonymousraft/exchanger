@@ -1,0 +1,32 @@
+//NAVIGATION
+.nav {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+
+    &__logo {
+        font-size: 3.5rem;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__list-item{
+
+        &:not(:last-child)
+        {
+            margin-right: 2rem;
+        }
+    }
+
+    &__icon{
+        height: 2rem;
+        width: 2rem;
+    }
+}

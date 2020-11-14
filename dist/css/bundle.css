@@ -1,3 +1,55 @@
+/*
+    Max-width
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
 body {
-  background-color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.container {
+  min-width: 114rem;
+  padding: 0 5rem;
+}
+
+.header {
+  background-color: #0c6aff;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+.nav__logo {
+  font-size: 3.5rem;
+}
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.nav__list-item:not(:last-child) {
+  margin-right: 2rem;
+}
+.nav__icon {
+  height: 2rem;
+  width: 2rem;
 }
