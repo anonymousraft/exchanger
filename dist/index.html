@@ -67,7 +67,7 @@
                             <input type="number" id="currencyToInput" class="form__input" placeholder="e.g. 56.5">
                         </div>
                         <div class="unit-price">
-                            <h2 class="unit-price__from">1 USD = 74.45 INR</h2>
+                            <h2 class="unit-price__from">1 USD = 74.56 INR</h2>
                             <h2 class="unit-price__to">1 INR = 0.02 USD</h2>
                         </div>
                         <span class="disclaimer">
@@ -77,13 +77,34 @@
                 </div>
             </section>
             <section class="section section-information">
-                Information
+                <div class="detail">
+                    <h2 class="detail__heading">
+                        Exchanger App
+                    </h2>
+                    <p class="detail__description">
+                        Exchanger app uses external API provided by  <a href="#">Fixer.io</a> to convert currency. This uses free version of the API. To get started with this API, all you need to do is get your free API from <a href="#">Fixer.io</a>. Coversion is done by the AJAX request, So no page load require.
+                    </p>
+                    <h3 class="detail__subheading">
+                        Things you need before you get started
+                    </h3>
+                    <ul class="detail__list">
+                        <li class="detail__list-item">API Key from fixer.io.</li>
+                        <li class="detail__list-item">Add API key in file <code>/src/js/api.js</code></li>
+                        <li class="detail__list-item">Run command <code>npm run build</code></li>
+                        <li class="detail__list-item">Access <code>index.html</code> from <code>/dist</code> folder.</li>
+                        <li class="detail__list-item">You are good to go</li>
+                    </ul>
+                    <p class="detail__credit">
+                        Thank you fixer.io for providing free API access.
+                    </p>
+                </div>
+                
             </section>
         </main>
         <footer class="footer">
             <span class="footer__text">Project made with <svg class="footer__icon">
                 <use xlink:href="img/icons.svg#exchanger-heart"></use>
-            </svg> by <a href="https://hitendra.co" target="_blank">Hitendra Rathore</a>. Free to use under GNU GPLv3 Liscense.</span>
+            </svg> by <a href="https://hitendra.co" target="_blank">Hitendra Rathore</a>. Free to use under GNU GPLv3 License.</span>
         </footer>
     </div>
 <script src="js/bundle.js"></script></body>

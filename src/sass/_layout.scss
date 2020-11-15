@@ -1,5 +1,9 @@
 .container {
     min-width: $container-width;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .header {
@@ -28,11 +32,15 @@
 }
 
 .section-information {
-    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: 4rem 0;
 }
 
 .footer {
-    min-height: 15vh;
+    min-height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;

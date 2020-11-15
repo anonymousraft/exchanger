@@ -1,22 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 *,
 *::after,
-*::before{
+*::before {
     box-sizing: inherit;
 }
 
-html{
+html {
     box-sizing: border-box;
     font-size: 62.5%; //1rem = 10px
 }
 
-body{
-    font-family: 'Ubuntu',sans-serif;
+body {
+    font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     line-height: 1.6;
 }
 
+a:link,
+a:visited {
+    text-decoration: none;
+    color: map-get($app-color, primary);
+}
+
+code{
+    font-size: 1.4rem;
+    color:map-get($app-color, primary);
+    display: inline-block;
+    padding: .2rem 1rem;
+    background-color: map-get($app-color, dark-grey-1);
+    border-radius: .3rem;
+}
