@@ -63,6 +63,33 @@ body {
   background-color: grey;
 }
 
+.footer {
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef1f5;
+}
+.footer__text {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.footer__text a:link,
+.footer__text a:visited {
+  text-decoration: none;
+  color: #0c6aff;
+  display: inline-block;
+  margin-left: 0.2rem;
+}
+.footer__icon {
+  display: inline;
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: #0c6aff;
+  margin: 0 0.3rem;
+}
+
 .nav {
   display: flex;
   align-items: center;

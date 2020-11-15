@@ -1,22 +1,25 @@
-.container{
+.container {
     min-width: $container-width;
 }
 
-.header{
+.header {
     padding: 0 5rem;
-    background-image: linear-gradient(to top, map-get($app-color, dark-grey-1) 0%, map-get($app-color, dark-grey-2) 100%);
+    background-image: linear-gradient(
+        to top,
+        map-get($app-color, dark-grey-1) 0%,
+        map-get($app-color, dark-grey-2) 100%
+    );
 }
 
-.main{ 
+.main {
     display: flex;
 }
 
-.section{
+.section {
     width: 50vw;
 }
 
-.section-converter{
-    
+.section-converter {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,11 +27,37 @@
     padding: 4rem 0;
 }
 
-.section-information{
+.section-information {
     background-color: grey;
-    
 }
 
-.footer{
+.footer {
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: map-get($app-color, dark-grey-2);
 
+    &__text {
+        display: flex;
+        align-items: center;
+
+        font-size: 1.3rem;
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: map-get($app-color, primary);
+            display: inline-block;
+            margin-left: .2rem;
+        }
+    }
+
+    &__icon {
+        display: inline;
+        width: 1.3rem;
+        height: 1.3rem;
+        fill: map-get($app-color, primary);
+        margin: 0 0.3rem;
+    }
 }
