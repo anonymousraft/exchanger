@@ -7,5 +7,23 @@ $container-width: 114rem;
 //colors
 $app-color: (
     primary: #0c6aff,
-    dark-grey: #363636
+    dark-grey: #363636,
+    dark-grey-1: #e6e9f0,
+    dark-grey-2:#eef1f5,
+    light-grey-1:#777777,
+    light-grey-2:#080707,
+    black: #000,
+    white: #fff
 );
+
+/*
+Placeholder Form Styles
+*/
+%form-style{
+        height: 3.5rem;
+        font-family: inherit;
+        font-size: 1.5rem;
+        border: 0.1rem solid map-get($app-color, light-grey-1);
+        background: transparent;
+        border-radius: 0.5rem;
+}

@@ -1,32 +1,170 @@
 //NAVIGATION
 .nav {
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 0;
+    color: map-get($app-color, primary);
 
     &__logo {
-        font-size: 3.5rem;
+        &-heading {
+            font-size: 3.5rem;
+            font-weight: 400;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &-subheading {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: map-get($app-color, dark-grey);
+        }
     }
 
     &__list {
         list-style: none;
         display: flex;
         align-items: center;
-
     }
 
-    &__list-item{
-
-        &:not(:last-child)
-        {
+    &__list-item {
+        &:not(:last-child) {
             margin-right: 2rem;
         }
     }
 
-    &__icon{
+    &__link,
+    &__link:visited {
+        color: currentColor;
+    }
+
+    &__link:hover &__icon {
+        color: map-get($app-color, dark-grey);
+        transform-origin: top;
+        transform: rotate(360deg);
+        fill: map-get($app-color, dark-grey);
+    }
+
+    &__icon {
         height: 2rem;
         width: 2rem;
+        fill: currentColor;
+        transition: all 0.3s;
+    }
+}
+
+//Converter
+.converter {
+    flex: 0 0 70%;
+    padding: 2rem;
+    border: 0.2rem solid map-get($app-color, primary);
+    border-radius: 0.8rem;
+    box-shadow: 0 1rem 3rem rgba(#000, 0.2);
+    background-color: map-get($app-color, white );
+
+    &__result {
+        margin-bottom: 2rem;
+
+        & > * {
+            display: block;
+        }
+
+        &-to {
+            font-size: 1.5rem;
+            color: map-get($app-color, primary);
+        }
+
+        &-from {
+            font-size: 3rem;
+            color: map-get($app-color, dark-grey);
+        }
+
+        &-date {
+            font-size: 1.1rem;
+            color: map-get($app-color, light-grey-1);
+        }
+    }
+}
+
+//FORM
+.form {
+    &__from {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__to {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        @extend %form-style;
+
+        width: 35%;
+        font-weight: 300;
+        margin-right: 1.5rem;
+        padding: 0 2rem 0 1rem;
+        overflow: hidden;
+
+        &:focus {
+            outline: none;
+            color: map-get($app-color, primary);
+        }
+    }
+
+    &__input {
+        @extend %form-style;
+
+        flex: 1;
+        padding: 0 1rem 0 1rem;
+
+        &:focus {
+            outline: none;
+            color: map-get($app-color, primary);
+            border: 0.1rem solid map-get($app-color, primary);
+            transition: all .2s;
+        }
+
+        &::-webkit-input-placeholder{
+            color: map-get($app-color, light-grey-1);
+            font-weight: 300;
+        }
+    }
+}
+
+//UNIT PRICE
+.unit-price{
+
+    margin-top: 2rem;
+
+    &>*{
+        font-size: 2rem;
+        font-weight: 300;
+        color: map-get($app-color, primary );
+    }
+
+    &__from{
+
+    }
+
+    &__to{
+
+    }
+}
+
+.disclaimer{
+    margin-top: 2rem;
+    font-size: 1.1rem;
+
+    a:link, a:visited{
+        text-decoration: none;
+        color: map-get($app-color, primary);
     }
 }

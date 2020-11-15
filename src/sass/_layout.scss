@@ -1,15 +1,32 @@
 .container{
     min-width: $container-width;
-    padding: 0 5rem;
 }
 
 .header{
-    background-color: map-get($app-color,"primary");
-
+    padding: 0 5rem;
+    background-image: linear-gradient(to top, map-get($app-color, dark-grey-1) 0%, map-get($app-color, dark-grey-2) 100%);
 }
 
-.main{
+.main{ 
+    display: flex;
+}
 
+.section{
+    width: 50vw;
+}
+
+.section-converter{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4rem 0;
+}
+
+.section-information{
+    background-color: grey;
+    
 }
 
 .footer{
