@@ -8,8 +8,6 @@ import { elements } from './views/base';
 import Search from './models/Search';
 import * as searchView from './views/searchView';
 
-console.log(elements);
-
 /**
  * Global State of the App
  * All values at a current time
@@ -66,7 +64,6 @@ const searchController = async (type) => {
         searchView.textResult();
         searchView.unitPriceClear();
     } 
-    //5. Render Result to the UI
 }
 
 
