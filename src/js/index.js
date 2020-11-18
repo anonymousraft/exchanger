@@ -64,12 +64,8 @@ const searchController = async (type) => {
         searchView.inputToClear();
         searchView.inputFromClear();
         searchView.textResult();
-    }
-
-    
-
-    
-
+        searchView.unitPriceClear();
+    } 
     //5. Render Result to the UI
 }
 
@@ -83,4 +79,23 @@ Array.from(elements.input).forEach((element) => {
         searchController(type);
     });
 })
+
+/**
+ * Document on load
+ */
+window.addEventListener('load',e => {
+    searchController('from');
+});
+
+/**
+ * List Event
+ */
+Array.from(elements.list).forEach(element => {
+    element.addEventListener('change',e => {
+        console.log('event triggered');
+        const type = e.target.id === 'currencyFromList' ? 'from' : 'to';
+        searchController(type);
+    });
+});
+
 

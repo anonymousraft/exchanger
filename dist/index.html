@@ -209,7 +209,7 @@
                                 <option value="UGX">Uganda Shilling</option>
                                 <option value="CLF">Unidad de Fomento</option>
                                 <option value="COU">Unidad de Valor Real</option>
-                                <option value="USD">US Dollar</option>
+                                <option value="USD" selected>US Dollar</option>
                                 <option value="USN">US Dollar (Next day)</option>
                                 <option value="UZS">Uzbekistan Sum</option>
                                 <option value="VUV">Vatu</option>
@@ -223,7 +223,7 @@
                                 <option value="ZWL">Zimbabwe Dollar</option>
                                 <option value="PLN">Zloty</option>
                             </select>
-                            <input type="number" id="currencyFromInput" class="form__input" placeholder="e.g. 56.5">
+                            <input type="number" id="currencyFromInput" class="form__input" placeholder="e.g. 56.5" value="1">
                         </div>
                         <div class="form__to">
                             <select id="currencyToList" class="form__list">
@@ -288,7 +288,7 @@
                                 <option value="HKD">Hong Kong Dollar</option>
                                 <option value="UAH">Hryvnia</option>
                                 <option value="ISK">Iceland Krona</option>
-                                <option value="INR">Indian Rupee</option>
+                                <option value="INR" selected>Indian Rupee</option>
                                 <option value="IRR">Iranian Rial</option>
                                 <option value="IQD">Iraqi Dinar</option>
                                 <option value="JMD">Jamaican Dollar</option>
@@ -426,7 +426,7 @@
                     </h3>
                     <ul class="detail__list">
                         <li class="detail__list-item">API Key from fixer.io.</li>
-                        <li class="detail__list-item">Add API key in file <code>/src/js/api.js</code></li>
+                        <li class="detail__list-item">Add API key in file <code>/src/js/views/appSettings.js</code></li>
                         <li class="detail__list-item">Run command <code>npm run build</code></li>
                         <li class="detail__list-item">Access <code>index.html</code> from <code>/dist</code> folder.
                         </li>

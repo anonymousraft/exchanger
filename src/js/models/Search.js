@@ -30,9 +30,9 @@ export default class Search{
         const baseUnitFrom = this.apiData[this.query.from];
         const baseUnitTo = this.apiData[this.query.to];
 
-        const convertUnitFrom = this.unitPrice(baseUnitFrom, baseUnitTo).toFixed(2);
-        const convertUnitTo = this.unitPrice(baseUnitTo, baseUnitFrom).toFixed(2);
-        const convertResult = (convertUnitFrom * this.query.value).toFixed(2);
+        const convertUnitFrom = this.unitPrice(baseUnitFrom, baseUnitTo);
+        const convertUnitTo = this.unitPrice(baseUnitTo, baseUnitFrom);
+        const convertResult = (convertUnitFrom * this.query.value);
         
         this.result = {
             base: this.base,
@@ -42,7 +42,8 @@ export default class Search{
             baseUnitTo,
             convertUnitFrom,
             convertUnitTo,
-            convertResult
+            convertResult,
+            timestamp: this.resultTimeStamp
         }
     }
 

@@ -8,6 +8,8 @@ export const elements = {
     resultDate: document.querySelector('.converter__result-date'),
     unitPriceFrom: document.querySelector('.unit-price__from'),
     unitPriceTo: document.querySelector('.unit-price__to'),
-    input: document.querySelectorAll('.form__input')
+    input: document.querySelectorAll('.form__input'),
+    date: document.querySelector('.converter__result-date'),
+    list: document.querySelectorAll('.form__list')
 }
 
