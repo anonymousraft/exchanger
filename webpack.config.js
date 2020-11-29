@@ -1,6 +1,8 @@
 const { timeStamp } = require('console');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
 const path = require('path');
 
 module.exports = {
@@ -36,7 +38,12 @@ module.exports = {
                             loader: 'css-loader'
                         },
                         {
-                            loader: 'postcss-loader'
+                            loader: 'postcss-loader',
+                            options: {
+                                postcssOptions: {
+                                    config: path.resolve(__dirname, "postcss.config.js"),
+                                },
+                            }
                         },
                         {
                             loader: 'sass-loader',
@@ -57,7 +64,8 @@ module.exports = {
                         // In options we can set different things like format
                         // and directory to save
                         options: {
-                            outputPath: 'img'
+                            outputPath: 'img',
+                            publicPath: 'img'
                         }
                     }
                 ]
@@ -78,7 +86,15 @@ module.exports = {
         ]
     },
     plugins: [
-
+        new CleanWebpackPlugin(),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: "src/img/",
+                    to: "img/"
+                },
+            ],
+        }),
         new MiniCssExtractPlugin({
             filename: "css/bundle.css"
         }),
